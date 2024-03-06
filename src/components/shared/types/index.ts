@@ -1,0 +1,6 @@
+export * from './ComponentColor'
+export * from './ComponentOrientation'
+export * from './ComponentRounded'
+export * from './ComponentSize'
+export * from './ComponentTextSize'
+export * from './ComponentVariant'
