@@ -5,6 +5,8 @@ export default {
     extend: {
       colors: {
         current: 'currentColor',
+        'dark-background': '#2E2836',
+        gold: '#C29762',
       },
     },
   },
