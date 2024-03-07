@@ -115,13 +115,13 @@ const ordersInfo: OrderInfoData[] = [
         class="w-full h-full relative"
       >
         <IconColoredCards
-          class="absolute h-52 w-52 left-6 -top-8 z-50 hidden lg:block"
+          class="absolute h-44 w-44 left-6 -top-8 z-50 hidden lg:block"
         />
 
         <div class="absolute inset-0 flex flex-col">
           <div class="w-full h-full flex flex-col">
             <div
-              class="min-h-[12rem] flex flex-wrap lg:pl-72 justify-center lg:justify-start w-full pt-5 gap-5"
+              class="min-h-[10rem] flex flex-wrap lg:pl-56 justify-center lg:justify-start w-full pt-5 gap-5"
             >
               <OrderCardInfo
                 v-for="(info, index) in ordersInfo"

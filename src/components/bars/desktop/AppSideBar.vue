@@ -24,7 +24,7 @@ const isLoading = computed<boolean>(() => {
 </script>
 
 <template>
-  <div class="flex h-full min-w-[7rem] pb-4">
+  <div class="flex h-full min-w-[6rem] pb-4">
     <!-- <SidebarSkeletonLoading v-if="isLoading" /> -->
     <!-- v-if="!isLoading" -->
     <div class="my-auto flex h-full w-full flex-col justify-between">
