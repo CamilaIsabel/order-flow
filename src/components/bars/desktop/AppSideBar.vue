@@ -30,7 +30,7 @@ const isLoading = computed<boolean>(() => {
     <div class="my-auto flex h-full w-full flex-col justify-between">
       <div class="w-full">
         <!-- Logo -->
-        <div class="w-full flex justify-center min-h-[11rem] items-center">
+        <div class="w-full flex justify-center min-h-[8rem] items-center">
           <router-link :to="{ name: RouteNames.purchaseOrders }">
             <IconTendencysInnovations class="h-10 w-min" />
           </router-link>

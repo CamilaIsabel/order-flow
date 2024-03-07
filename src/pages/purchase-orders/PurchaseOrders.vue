@@ -115,13 +115,13 @@ const ordersInfo: OrderInfoData[] = [
         class="w-full h-full relative"
       >
         <IconColoredCards
-          class="absolute h-60 w-60 left-6 -top-12 z-50 hidden lg:block"
+          class="absolute h-52 w-52 left-6 -top-8 z-50 hidden lg:block"
         />
 
         <div class="absolute inset-0 flex flex-col">
           <div class="w-full h-full flex flex-col">
             <div
-              class="min-h-[13rem] flex flex-wrap lg:pl-72 justify-center lg:justify-start w-full pt-5 gap-5"
+              class="min-h-[12rem] flex flex-wrap lg:pl-72 justify-center lg:justify-start w-full pt-5 gap-5"
             >
               <OrderCardInfo
                 v-for="(info, index) in ordersInfo"
@@ -129,7 +129,7 @@ const ordersInfo: OrderInfoData[] = [
                 :info="info"
               />
             </div>
-            <div class="p-10 w-full overflow-y-auto flex flex-col h-full">
+            <div class="px-8 pb-8 w-full overflow-y-auto flex flex-col h-full">
               <span class="font-semibold text-base mb-5 text-white"
                 >Recent Orders</span
               >
