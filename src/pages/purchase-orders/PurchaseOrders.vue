@@ -1,8 +1,11 @@
 <script setup lang="ts">
 import AppTable from '../../components/shared/table/AppTable.vue';
 import { AppTableField } from '../../components/shared/table/table.interface';
-import { onMounted } from 'vue';
+import { onMounted, computed } from 'vue';
 import { usePurchaseOrder } from '../../composables/use.purchase-order';
+import { loadersList } from '../../composables/use.loading';
+import SpinnerKeys from '../../common/utils.spinner-keys';
+import AppLoadingOverlay from '../../components/shared/loading/AppLoadingOverlay.vue';
 
 const { refreshPurchaseOrdersData, purchaseOrders } = usePurchaseOrder();
 
@@ -28,12 +31,21 @@ const fields: AppTableField[] = [
 function onRowCliked(value: any): void {
   debugger;
 }
+
+const isLoading = computed<boolean>(() => {
+  return loadersList.value.includes(SpinnerKeys.PurchaseOrders);
+});
 </script>
 
 <template>
-  <IconColoredCards class="absolute h-72 w-72 left-0 -top-20 z-50" />
+  <AppLoadingOverlay :loading="isLoading" size="x-large" />
 
-  <div class="absolute inset-0 flex flex-col">
+  <IconColoredCards
+    v-if="!isLoading"
+    class="absolute h-72 w-72 left-0 -top-20 z-50"
+  />
+
+  <div v-if="!isLoading" class="absolute inset-0 flex flex-col">
     <div class="min-h-[16rem] w-full bg-blue-900"></div>
     <div class="px-10 py-10 w-[50rem] overflow-y-auto h-full">
       <AppTable
