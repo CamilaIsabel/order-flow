@@ -141,10 +141,10 @@ const ordersInfo: OrderInfoData[] = [
                 @row-click="onRowCliked"
               >
                 <template #name="{ data }">
-                  <span>{{ data.name }}</span>
+                  <span class="text-sm">{{ data.name }}</span>
                 </template>
                 <template #currency="{ data }">
-                  <span>{{ data.currency }}</span>
+                  <span class="text-sm">{{ data.currency }}</span>
                 </template>
                 <template #status="{ data }">
                   <span
@@ -154,7 +154,9 @@ const ordersInfo: OrderInfoData[] = [
                   >
                 </template>
                 <template #updatedAt="{ data }">
-                  <span>{{ formatDate(new Date(data.dates.updatedAt)) }}</span>
+                  <span class="text-sm">{{
+                    formatDate(new Date(data.dates.updatedAt))
+                  }}</span>
                 </template>
               </AppTable>
             </div>
