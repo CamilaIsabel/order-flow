@@ -4,8 +4,12 @@ import { usePurchaseOrder } from '../../../composables/use.purchase-order';
 import Product from './Product.vue';
 import { useToaster } from '../../../components/shared/toaster/use.toasters';
 
-const { selectedOrder, showOrderDetails, openAddProductModal } =
-  usePurchaseOrder();
+const {
+  selectedOrder,
+  showOrderDetails,
+  openAddProductModal,
+  addProductModalIsOpen,
+} = usePurchaseOrder();
 const { toaster } = useToaster();
 
 const paid = ref<boolean>(false);
@@ -56,6 +60,7 @@ function payOrder(): void {
     </div>
     <div class="w-full flex justify-end mt-4">
       <div
+        v-if="!addProductModalIsOpen"
         @click="payOrder"
         class="flex items-center relative justify-between gap-x-2 bg-dark-background rounded-full text-white font-bold text-xs"
       >
@@ -75,14 +80,3 @@ function payOrder(): void {
     </div>
   </div>
 </template>
-
-<style>
-.future-buttons {
-  background: rgb(74, 78, 85);
-  background: linear-gradient(
-    0deg,
-    rgba(74, 78, 85, 0) 1%,
-    rgba(97, 102, 113, 1) 100%
-  );
-}
-</style>

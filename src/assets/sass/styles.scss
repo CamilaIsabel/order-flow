@@ -1,3 +1,13 @@
+// FUTURE BUTTONS STYLE
+.future-buttons {
+  background: rgb(74, 78, 85);
+  background: linear-gradient(
+    0deg,
+    rgba(74, 78, 85, 0) 1%,
+    rgba(97, 102, 113, 1) 100%
+  );
+}
+
 // Disable elements
 .is-disabled {
   cursor: no-drop;

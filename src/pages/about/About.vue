@@ -1,13 +1,24 @@
+<script setup lang="ts"></script>
+
 <template>
   <div class="p-8">
     <div class="flex justify-between w-full items-center">
-      <span class="font-bold text-base text-white">About me</span>
-      <div class="flex">
-        <a href="https://github.com/CamilaIsabel" target="_blank">
-          <IconGithub class="h-10 w-10" />
+      <span class="text-white font-bold text-base">About me</span>
+      <div class="flex gap-x-2">
+        <a
+          href="https://github.com/CamilaIsabel"
+          target="_blank"
+          class="flex items-center justify-center future-buttons rounded-lg p-1 text-white font-bold text-xs shadow-sm hover:bg-white hover:bg-opacity-55"
+        >
+          <IconGithub class="h-5 w-5" />
         </a>
-        <a href="https://www.linkedin.com/in/camila-lazaro/" target="_blank">
-          <IconLinkedin class="h-10 w-10" />
+
+        <a
+          href="https://github.com/CamilaIsabel"
+          target="_blank"
+          class="flex items-center justify-center future-buttons rounded-lg p-1 text-white font-bold text-xs shadow-sm hover:bg-white hover:bg-opacity-55"
+        >
+          <IconLinkedin class="h-5 w-5" />
         </a>
       </div>
     </div>
