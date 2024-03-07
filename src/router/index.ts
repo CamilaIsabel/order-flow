@@ -1,13 +1,13 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router';
 import { EAppLayout } from '../layouts/types';
 
-const Home = () => import('../pages/home/Home.vue');
+const About = () => import('../pages/about/About.vue');
 const PurchaseOrders = () =>
   import('../pages/purchase-orders/PurchaseOrders.vue');
 
 export const RouteNames = {
-  home: 'home',
   purchaseOrders: 'purchase-orders',
+  about: 'about',
 };
 
 declare module 'vue-router' {
@@ -19,15 +19,15 @@ declare module 'vue-router' {
 const routes: RouteRecordRaw[] = [
   {
     path: '/',
-    redirect: RouteNames.home, // redirects to '/home'
+    redirect: RouteNames.purchaseOrders, // redirects to '/home'
     meta: {
       layout: EAppLayout.DefaultLayout,
     },
   },
   {
-    name: RouteNames.home,
-    path: '/home',
-    component: Home,
+    name: RouteNames.about,
+    path: '/about',
+    component: About,
     meta: {
       layout: EAppLayout.DefaultLayout,
     },

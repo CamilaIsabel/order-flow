@@ -23,3 +23,23 @@ export function generateUuid(): string {
     );
   }
 }
+
+export const isObject = (obj: object): boolean => {
+  return Object.prototype.toString.call(obj) === '[object Object]';
+};
+
+export const getNestedProp = <T extends object, ReturnType>(
+  obj: T,
+  path: string
+): ReturnType | null => {
+  if (!isObject(obj)) return null;
+
+  const arr: Array<string> = path.split('.');
+  let result = Object.assign({}, obj);
+  while (arr.length && result) {
+    const shift = arr.shift();
+    if (shift) result = result?.[shift];
+  }
+
+  return result as ReturnType;
+};
