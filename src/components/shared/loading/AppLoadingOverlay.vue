@@ -8,12 +8,14 @@ interface AppLoadingOverlayProps {
   loading: boolean;
   size?: ComponentSize;
   color?: ComponentColor;
+  classes?: string;
 }
 
 const props = withDefaults(defineProps<AppLoadingOverlayProps>(), {
   loading: false,
   size: 'medium',
   color: 'blue',
+  classes: 'bg-white bg-opacity-70',
 });
 
 const { size, color, loading } = toRefs(props);
@@ -64,8 +66,8 @@ const colorClasses = computed<string>(() => {
   >
     <div
       v-if="loading"
-      class="absolute inset-0 z-10 flex cursor-wait items-center justify-center bg-background bg-opacity-70"
-      :class="[sizeClasses, colorClasses]"
+      class="absolute inset-0 z-10 flex cursor-wait items-center justify-center"
+      :class="[sizeClasses, colorClasses, classes]"
     >
       <AppLoadingSpinner />
     </div>

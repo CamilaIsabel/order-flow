@@ -1,12 +1,6 @@
 <script lang="ts" setup>
 import { toRefs } from 'vue';
-
-interface Product {
-  name: string;
-  sku: string;
-  quantity: number;
-  price: string;
-}
+import { Product } from './types';
 
 type ProductProps = {
   product: Product;
@@ -17,7 +11,9 @@ const { product } = toRefs(props);
 </script>
 
 <template>
-  <div class="border w-80 flex flex-col gap-y-2 border-gray-600 p-5 rounded-xl">
+  <div
+    class="border w-80 h-min flex flex-col gap-y-2 border-gray-600 p-5 rounded-xl"
+  >
     <div class="flex items-center gap-x-2 text-gray-600">
       <IconBox class="w-5 h-5" />
       <span>Name:</span>

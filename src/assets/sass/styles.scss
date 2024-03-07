@@ -1,3 +1,10 @@
+// Disable elements
+.is-disabled {
+  cursor: no-drop;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
 // Custom Scrollbar
 ::-webkit-scrollbar {
   width: 6px;
@@ -38,4 +45,13 @@
       background: #717171;
     }
   }
+}
+
+.slide-fade-enter-active {
+  transition: all 0.5s ease-out;
+}
+
+.slide-fade-enter-from {
+  transform: translateX(300px);
+  opacity: 0;
 }

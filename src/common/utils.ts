@@ -1,3 +1,5 @@
+import { format } from 'date-fns';
+
 export function generateUuid(): string {
   if ('crypto' in window) {
     // return crypto.randomUUID()
@@ -43,3 +45,18 @@ export const getNestedProp = <T extends object, ReturnType>(
 
   return result as ReturnType;
 };
+
+export function formatPrice(inputString: string) {
+  // Remove any non-digit characters
+  const numericString = inputString.replace(/\D/g, '');
+
+  const stringWithoutSpaces = numericString.replace(/\s/g, '');
+
+  if (stringWithoutSpaces) return `$${stringWithoutSpaces.trim()}`;
+  return '';
+}
+
+export function formatDate(date: Date): string {
+  if (!date) return '';
+  return format(date, 'E MMM dd yyyy');
+}
