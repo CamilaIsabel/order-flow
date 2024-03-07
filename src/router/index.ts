@@ -1,9 +1,9 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router';
 import { EAppLayout } from '../layouts/types';
 
-const About = () => import('../pages/about/About.vue');
 const PurchaseOrders = () =>
   import('../pages/purchase-orders/PurchaseOrders.vue');
+const About = () => import('../pages/about/About.vue');
 
 export const RouteNames = {
   purchaseOrders: 'purchase-orders',
@@ -34,7 +34,7 @@ const routes: RouteRecordRaw[] = [
   },
   {
     name: RouteNames.purchaseOrders,
-    path: '/purchaseOrders',
+    path: '/purchase-orders',
     component: PurchaseOrders,
     meta: {
       layout: EAppLayout.DefaultLayout,
