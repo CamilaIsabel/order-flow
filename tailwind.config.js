@@ -7,6 +7,7 @@ export default {
         current: 'currentColor',
         'dark-background': '#2E2836',
         gold: '#C29762',
+        'modal-background': '#161616',
       },
     },
   },

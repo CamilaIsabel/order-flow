@@ -22,9 +22,9 @@ function payOrder(): void {
 }
 </script>
 <template>
-  <div class="w-full h-full flex flex-col px-10 pt-10 pb-8">
+  <div class="w-full h-full flex flex-col p-8">
     <div class="flex items-center justify-between">
-      <div class="flex items-center gap-x-2">
+      <div class="flex items-center gap-x-3">
         <button
           @click="showOrderDetails = false"
           class="flex items-center justify-center bg-dark-background rounded-lg p-1"
@@ -35,6 +35,8 @@ function payOrder(): void {
           >Order Number
           <span class="text-gray-400">#{{ selectedOrder.number }}</span></span
         >
+        <IconDot class="text-gray-400 w-4 h-4" />
+        <span class="text-light text-xl text-gray-400">Products</span>
       </div>
 
       <button

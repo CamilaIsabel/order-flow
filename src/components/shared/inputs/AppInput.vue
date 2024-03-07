@@ -65,7 +65,7 @@ const props = withDefaults(defineProps<AppInputProps>(), {
   formatter: null,
   focusOnMount: false,
   selectOnMount: false,
-  backgroundColorClass: 'bg-white',
+  backgroundColorClass: 'bg-transparent',
 });
 const emits = defineEmits<AppInputEvents>();
 
@@ -282,7 +282,7 @@ onMounted(() => {
         :aria-selected="isInputFocused"
         :aria-errormessage="String(hasInputError)"
         :for="inputId"
-        class="text-gray-600 transition-colors aria-disabled:cursor-not-allowed aria-disabled:select-none aria-disabled:opacity-50 aria-selected:text-blue-600 aria-[errormessage=true]:text-red-600"
+        class="text-gray-400 transition-colors aria-disabled:cursor-not-allowed aria-disabled:select-none aria-disabled:opacity-50 aria-selected:text-blue-600 aria-[errormessage=true]:text-red-600"
         :class="labelSizeClasses"
       >
         {{ label }}
@@ -403,3 +403,14 @@ onMounted(() => {
     </div>
   </div>
 </template>
+<style>
+input[type='text'],
+input[type='number'],
+textarea {
+  background: linear-gradient(
+    177.54deg,
+    rgba(7, 8, 12, 0.7) -58.73%,
+    rgba(9, 10, 16, 0.7) 90%
+  );
+}
+</style>

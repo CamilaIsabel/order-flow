@@ -171,16 +171,20 @@ const containerPadding = computed<string>(() => {
 <template>
   <div
     ref="modalRef"
-    class="absolute inset-0 z-50 flex h-full overflow-y-hidden lg:fixed"
+    class="absolute inset-0 z-50 flex h-full overflow-y-hidden lg:fixed text-white"
     :class="[modalAlignmentClasses, modalJustifyClasses]"
   >
     <div
       ref="currentModalRef"
-      class="relative flex flex-col bg-white shadow-md"
+      class="relative flex flex-col sheet border-white border-l-[1px] shadow-md border-opacity-10"
       :style="modalStyles"
       :class="[modalClasses, modalClass, containerPadding]"
     >
-      <AppLoadingOverlay size="large" :loading="loading" />
+      <AppLoadingOverlay
+        classes="bg-black bg-opacity-30"
+        size="large"
+        :loading="loading"
+      />
 
       <div
         v-if="title || $slots.header"
@@ -211,7 +215,7 @@ const containerPadding = computed<string>(() => {
       <div
         v-if="$slots.footer"
         :class="footerClasses"
-        class="border-t border-gray-200 px-4 py-2 lg:px-9"
+        class="px-4 py-2 lg:px-9 border-t-[1px] border-white border-opacity-10"
       >
         <slot name="footer" :close="tryClose" />
       </div>
@@ -220,21 +224,11 @@ const containerPadding = computed<string>(() => {
 </template>
 
 <style>
-.sheet {
-  background-image: linear-gradient(
-    to right top,
-    rgba(0, 0, 0, 0.7),
-    rgba(20, 5, 13, 0.7),
-    rgba(28, 11, 25, 0.7),
-    rgba(33, 16, 38, 0.7),
-    rgba(32, 22, 53, 0.7),
-    rgba(47, 29, 62, 0.7),
-    rgba(62, 36, 70, 0.7),
-    rgba(77, 44, 78, 0.7),
-    rgba(103, 59, 76, 0.7),
-    rgba(120, 78, 78, 0.7),
-    rgba(130, 101, 87, 0.7),
-    rgba(137, 123, 105, 0.7)
+div .sheet {
+  background: linear-gradient(
+    177.54deg,
+    rgba(7, 8, 12, 0.7) -58.73%,
+    rgba(9, 10, 16, 0.7) 90%
   );
 }
 </style>

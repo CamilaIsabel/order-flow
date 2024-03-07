@@ -34,7 +34,6 @@ const isLoading = computed<boolean>(() => {
     maxWidth="550"
     v-model="addProductModalIsOpen"
     full-screen
-    title="Add Product 😎"
     subtitle="All fields are required"
     close-on-backdrop
     :loading="isLoading"
@@ -84,15 +83,23 @@ const isLoading = computed<boolean>(() => {
         </div>
       </Form>
     </template>
+    <template #header>
+      <div class="flex w-full items-center gap-x-4">
+        <div class="flex items-center gap-x-2">
+          <h2 class="text-xl font-bold">Add Product</h2>
+        </div>
+        <IconColoredCart class="w-6 h-6" />
+      </div>
+    </template>
 
     <template #footer>
       <button
         :disabled="!formValidation"
         :class="{ 'is-disabled': !formValidation }"
         @click="addProduct"
-        class="w-full rounded bg-gray-900 py-3 text-sm font-bold text-white hover:bg-zinc-950"
+        class="w-full rounded bg-slate-800 hover:bg-slate-900 py-3 text-sm font-bold text-white"
       >
-        <span>Add Product</span>
+        <span>Add</span>
       </button>
     </template>
   </AppModal>
