@@ -26,10 +26,10 @@ function payOrder(): void {
     <div class="flex items-center justify-between">
       <div class="flex items-center gap-x-3">
         <button
+          class="flex items-center justify-center future-buttons rounded-lg p-1 text-white font-bold text-xs shadow-sm hover:bg-white hover:bg-opacity-55"
           @click="showOrderDetails = false"
-          class="flex items-center justify-center bg-dark-background rounded-lg p-1"
         >
-          <IconBackArrow class="h-5 w-5" />
+          <IconBackArrow class="h-4 w-4" />
         </button>
         <span class="font-bold text-base text-white"
           >Order Number
@@ -40,7 +40,7 @@ function payOrder(): void {
       </div>
 
       <button
-        class="flex items-center justify-center px-4 gap-x-2 bg-dark-background rounded-lg p-2 text-white font-bold text-xs"
+        class="flex items-center justify-center px-4 gap-x-2 future-buttons rounded-lg p-2 text-white font-bold text-xs shadow-sm hover:bg-white hover:bg-opacity-55"
         @click="openAddProductModal"
       >
         <IconPlus class="h-3 w-3" />
@@ -75,3 +75,14 @@ function payOrder(): void {
     </div>
   </div>
 </template>
+
+<style>
+.future-buttons {
+  background: rgb(74, 78, 85);
+  background: linear-gradient(
+    0deg,
+    rgba(74, 78, 85, 0) 1%,
+    rgba(97, 102, 113, 1) 100%
+  );
+}
+</style>
