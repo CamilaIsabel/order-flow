@@ -7,7 +7,6 @@ import { loadersList } from '../../composables/use.loading';
 import SpinnerKeys from '../../common/utils.spinner-keys';
 import AppLoadingOverlay from '../../components/shared/loading/AppLoadingOverlay.vue';
 import OrderDetails from './components/OrderDetails.vue';
-import AddProductModal from './components/AddProductModal.vue';
 import { formatDate } from '../../common/utils';
 import { Status } from './components/types';
 import { OrderInfoData } from './components/types';
@@ -170,7 +169,5 @@ const ordersInfo: OrderInfoData[] = [
         <OrderDetails />
       </div>
     </transition>
-
-    <AddProductModal />
   </div>
 </template>

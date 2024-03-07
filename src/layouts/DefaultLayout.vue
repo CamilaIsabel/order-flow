@@ -3,6 +3,7 @@ import { RouteNames } from '../router/index';
 import AppSideBar from '../components/bars/desktop/AppSideBar.vue';
 import AppHorizontalBar from '../components/bars/desktop/AppHorizontalBar.vue';
 import { TNavigationItem } from '../components/bars/types';
+import AddProductModal from '../pages/purchase-orders/components/AddProductModal.vue';
 
 const desktopItems: TNavigationItem[] = [
   {
@@ -33,6 +34,7 @@ const desktopItems: TNavigationItem[] = [
         <RouterView />
       </div>
     </div>
+    <AddProductModal />
   </div>
 </template>
 
