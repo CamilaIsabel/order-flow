@@ -27,9 +27,9 @@ const desktopItems: TNavigationItem[] = [
 
     <AppSideBar :items="desktopItems" class="hidden lg:block z-10" />
 
-    <div class="flex flex-col w-full h-full z-10 pb-10">
+    <div class="flex flex-col w-full h-full z-10 lg:pb-10">
       <AppHorizontalBar />
-      <div class="w-full h-full rounded-l-[64px] relative second-overlay">
+      <div class="w-full h-full lg:rounded-l-[64px] relative second-overlay">
         <RouterView />
       </div>
     </div>

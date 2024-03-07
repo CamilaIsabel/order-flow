@@ -27,7 +27,7 @@ function payOrder(): void {
       <div class="flex items-center gap-x-2">
         <button
           @click="showOrderDetails = false"
-          class="flex items-center justify-center bg-[#2E2836] rounded-lg p-1"
+          class="flex items-center justify-center bg-dark-background rounded-lg p-1"
         >
           <IconBackArrow class="h-5 w-5" />
         </button>
@@ -38,7 +38,7 @@ function payOrder(): void {
       </div>
 
       <button
-        class="flex items-center justify-center px-4 gap-x-2 bg-[#2E2836] rounded-lg p-2 text-white font-bold text-xs"
+        class="flex items-center justify-center px-4 gap-x-2 bg-dark-background rounded-lg p-2 text-white font-bold text-xs"
         @click="openAddProductModal"
       >
         <IconPlus class="h-3 w-3" />
@@ -55,7 +55,7 @@ function payOrder(): void {
     <div class="w-full flex justify-end mt-4">
       <div
         @click="payOrder"
-        class="flex items-center relative justify-between gap-x-2 bg-[#2E2836] rounded-full text-white font-bold text-xs"
+        class="flex items-center relative justify-between gap-x-2 bg-dark-background rounded-full text-white font-bold text-xs"
       >
         <div
           :class="
