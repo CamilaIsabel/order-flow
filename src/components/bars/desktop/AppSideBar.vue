@@ -32,7 +32,7 @@ const isLoading = computed<boolean>(() => {
         <!-- Logo -->
         <div class="w-full flex justify-center min-h-[7rem] items-center">
           <router-link :to="{ name: RouteNames.purchaseOrders }">
-            <IconTendencysInnovations class="h-10 w-min" />
+            <IconShopping class="h-10 w-min" />
           </router-link>
         </div>
         <!-- Logo -->

@@ -14,7 +14,7 @@
         </a>
 
         <a
-          href="https://github.com/CamilaIsabel"
+          href="https://www.linkedin.com/in/camila-lazaro/"
           target="_blank"
           class="flex items-center justify-center future-buttons rounded-lg p-1 text-white font-bold text-xs shadow-sm hover:bg-white hover:bg-opacity-55"
         >
