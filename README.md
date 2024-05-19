@@ -1,4 +1,4 @@
-# OrderFlow:shopping_cart: 
+# OrderFlow 🛍️
 #### Features/Overview:
 ###### Its goal is to display a collection of purchase orders and their associated products, with the ability to add more products if desired
 
